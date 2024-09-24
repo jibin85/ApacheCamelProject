@@ -1,0 +1,48 @@
+Apache ActiveMQ and AMQ are terms that often come up in the context of messaging and message brokers, and they can sometimes be confusing. Here’s a breakdown of their differences and relationships:
+
+Apache ActiveMQ:
+	Apache ActiveMQ is an open-source message broker and integration pattern server developed by the Apache Software Foundation. It supports a wide range of messaging protocols and is known for its flexibility and ease of use.
+
+	- Features:
+	  - Protocol Support: Supports multiple protocols such as AMQP, MQTT, OpenWire, and STOMP.
+	  - Message Patterns: Supports point-to-point (queue-based) and publish-subscribe (topic-based) messaging models.
+	  - Persistence: Offers various options for message persistence and durability, including file-based and database-based persistence.
+	  - Clustering: Provides options for clustering and high availability.
+	  - Integration: Works well with other Apache projects and integrates easily with various applications.
+
+	- Use Cases: Suitable for enterprise messaging, application integration, and distributed systems.
+	- Documentation: Comprehensive [Apache ActiveMQ documentation](https://activemq.apache.org/components/classic/documentation/).
+
+AMQ:
+	AMQ is a product name used by Red Hat for their commercial messaging solutions, which are built on top of Apache ActiveMQ. Red Hat’s AMQ offerings include enhancements, additional features, and enterprise support.
+
+	- AMQ Product Line: 
+	  - Red Hat AMQ 7: Based on Apache ActiveMQ Artemis, which is a new messaging broker designed for high performance and scalability.
+	  - Red Hat AMQ 6: Based on Apache ActiveMQ Classic (the original ActiveMQ).
+
+	- Features:
+	  - Enterprise Support: Includes support, maintenance, and additional enterprise features provided by Red Hat.
+	  - Enhanced Features: May include advanced security features, management tools, and additional integrations.
+	  - Service Level Agreement (SLA): Provides professional support and guaranteed service levels.
+
+	- Use Cases: Designed for enterprises that require reliable messaging solutions with professional support and additional features.
+
+Summary of Differences:
+
+1. Base Technology:
+   - Apache ActiveMQ: Open-source message broker with a wide range of features.
+   - AMQ: Commercial messaging solutions from Red Hat, which build on Apache ActiveMQ or Apache ActiveMQ Artemis.
+
+2. Support:
+   - Apache ActiveMQ: Community support with open-source resources.
+   - AMQ: Enterprise support from Red Hat with additional commercial features.
+
+3. Features:
+   - Apache ActiveMQ: Core features suitable for many use cases.
+   - AMQ: Adds enterprise-grade features, support, and integration options.
+
+4. Product Line:
+   - Apache ActiveMQ: Available as a standalone open-source product.
+   - AMQ: Available as Red Hat’s commercial product line with various versions and enhancements.
+
+In summary, Apache ActiveMQ is the open-source messaging broker, while AMQ represents Red Hat's commercial solutions based on Apache ActiveMQ or its newer counterpart, ActiveMQ Artemis, with additional enterprise features and support.

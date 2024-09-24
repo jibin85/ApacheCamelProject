@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.3</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.atos</groupId>
+    <artifactId>apache-camel-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>apache-camel-demo</name>
+    <description>Demo project for Apache Camel Spring Boot</description>
+    <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+        <camel.version>3.7.2</camel.version>
+        <cucumber.version>6.10.4</cucumber.version>
+    </properties>
+    <dependencies>
+        <!--Apache Camel Core Dependency-->
+        <!-- Camel Core -->
+        <!-- Contains Camel's core model classes. Compatible with Camel 3.7.2. -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core-model</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <!-- Camel Spring Boot Starter -->
+        <!-- Provides Spring Boot auto-configuration for Apache Camel. Compatible with Camel 3.7.2. -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <!-- Provides auto-configuration for Apache Camel with ActiveMQ in Spring Boot,
+            simplifying message routing and integration -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-activemq-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <!-- Apache Camel Test library provides utilities for testing Camel routes and components. -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <version>${camel.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Apache Camel Spring Boot Starter for FTP component -->
+        <!-- Provides integration with FTP servers within Spring Boot applications -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-ftp-starter</artifactId>
+            <version>3.7.1</version>
+        </dependency>
+        <!-- Apache Camel BeanIO Component -->
+        <!--Provides integration with BeanIO for unmarshaling and marshaling data formats in Apache Camel routes-->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-beanio</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <!-- BeanIO Library -->
+        <!--Provides a flexible library for mapping between XML, CSV, and other data formats and Java objects-->
+        <dependency>
+            <groupId>org.beanio</groupId>
+            <artifactId>beanio</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <!-- Apache Camel JAXB component provides support for marshalling and unmarshalling Java objects to and from XML using JAXB. -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-jaxb</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <!-- JAXB API provides the Java architecture for XML binding (JAXB), which is used for converting Java objects to XML and vice versa. -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+
+        <!--Cucumber BDD Testing related Dependencies-->
+        <!-- Cucumber Core -->
+        <!-- Core library for Cucumber, which is used for behavior-driven development (BDD) testing. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <!-- Cucumber Java -->
+        <!-- Provides support for Cucumber with Java. Includes Cucumber API for writing step definitions and hooks. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <!-- Cucumber Spring -->
+        <!-- Integrates Cucumber with the Spring framework, allowing you to use Spring beans in your step definitions. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <!-- Cucumber JUnit -->
+        <!-- Provides JUnit support for Cucumber, allowing you to run Cucumber tests with JUnit. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--Project Lombok for Pojo-->
+        <!-- A Java library that provides annotations to reduce boilerplate code, such as getters, setters, and constructors. -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- Apache Commons Lang library provides utility methods for core Java classes, such as String manipulation and null handling. -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <!-- Spring-Boot related dependencies -->
+        <!-- Spring Boot Starter Web -->
+        <!-- Includes all the dependencies and auto-configuration needed to build a web application using Spring MVC. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter Test -->
+        <!-- Provides support for testing Spring Boot applications with JUnit, Mockito, Hamcrest, and other testing frameworks. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Boot DevTools -->
+        <!-- Provides additional development-time features, such as automatic restarts and live reload. Marked as optional to exclude it from production builds. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- Spring Boot Starter Actuator -->
+        <!-- Adds production-ready features to your application, such as metrics, health checks, and monitoring endpoints. It provides a way to expose operational information about your application. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.5.0</version>
+                <executions>
+                    <execution>
+                        <id>insurance-xml-endpoint</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <clearOutputDir>false</clearOutputDir>
+                            <packageName>com.insurance.xmlendpoint</packageName>
+                            <sources>
+                                <source>
+                                    src/main/resources/xsd/validClaimSchema.xsd
+                                </source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

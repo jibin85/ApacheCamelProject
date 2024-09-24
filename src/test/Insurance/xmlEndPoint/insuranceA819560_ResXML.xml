@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customerDetails>
+    <validClaim>NO</validClaim>
+    <customer>
+        <customerName></customerName>
+        <customerId></customerId>
+        <customerAge></customerAge>
+    </customer>
+    <claim>
+        <claimAmt>0</claimAmt>
+    </claim>
+</customerDetails>
